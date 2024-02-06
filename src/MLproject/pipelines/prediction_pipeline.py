@@ -22,7 +22,7 @@ class PredictPipeline:
             data_scaled=preprocessor.transform(features)
             preds=model.predict(data_scaled)
             
-            
+        
             return preds
         except Exception as e:
             raise CustomException(sys,e)
@@ -47,7 +47,7 @@ class CustomData:
         self.glazing_orientation = glazing_orientation
         self.aspect_ratio = aspect_ratio
         self.total_area = total_area
-        
+
 
     
     def get_data_as_data_frame(self):
