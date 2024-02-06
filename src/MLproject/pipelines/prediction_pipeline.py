@@ -47,6 +47,7 @@ class CustomData:
         self.glazing_orientation = glazing_orientation
         self.aspect_ratio = aspect_ratio
         self.total_area = total_area
+        
 
     
     def get_data_as_data_frame(self):
