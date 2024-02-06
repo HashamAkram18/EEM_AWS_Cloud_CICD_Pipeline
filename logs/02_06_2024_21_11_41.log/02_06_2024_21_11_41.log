@@ -1,0 +1,6 @@
+[ 2024-02-06 21:11:41,612 ] 96 werkzeug - WARNING -  * Debugger is active!
+[ 2024-02-06 21:11:41,615 ] 96 werkzeug - INFO -  * Debugger PIN: 568-501-697
+[ 2024-02-06 21:11:51,531 ] 96 werkzeug - INFO - 127.0.0.1 - - [06/Feb/2024 21:11:51] "GET / HTTP/1.1" 200 -
+[ 2024-02-06 21:11:53,343 ] 96 werkzeug - INFO - 127.0.0.1 - - [06/Feb/2024 21:11:53] "GET /home HTTP/1.1" 200 -
+[ 2024-02-06 21:12:23,636 ] 96 werkzeug - INFO - 127.0.0.1 - - [06/Feb/2024 21:12:23] "POST /home HTTP/1.1" 200 -
+[ 2024-02-06 21:12:51,407 ] 96 werkzeug - INFO -  * Detected change in 'G:\\iNeuron_internship\\EEM_AWS_CICD_Pipeline\\src\\MLproject\\pipelines\\prediction_pipeline.py', reloading

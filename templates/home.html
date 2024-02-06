@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .login {
+            text-align: center;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            max-width: 100%;
+        }
+        
+        h1 {
+            color: #333;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: #333;
+            font-size: 24px;
+            margin-top: 30px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .mb-3 {
+            margin-bottom: 20px;
+            width: 100%;
+        }
+        label {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 5px;
+            display: block;
+            text-align: left;
+        }
+        select, input {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-top: 5px;
+            box-sizing: border-box;
+        }
+        .btn {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 15px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+
+
+<body>
+    <div class="login">
+        <!-- Add container for the navigation button -->
+        <div class="top-left-nav">
+            <a href="{{ url_for('index') }}" class="cta-button">
+                <span class="navigate-icon">&#10148;</span> Navigate to Home Page
+            </a>
+        </div>
+        <!-- rest of your code -->
+    </div>
+</body>
+
+</html>
+
+<style>
+    /* Add styles to position the container in the top-left corner */
+    body {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        height: 100vh;
+        margin: 0;
+        background-color: lightgrey; /* Change the background color */
+        font-size: 16px; /* Set default font size */
+    }
+    
+
+    .login {
+            text-align: center;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(19, 18, 18, 0.1);
+            width: 80%;
+            max-width: 400px;
+            margin-top: 20px;
+            position: relative; /* Add position relative for absolute positioning */
+        }
+
+    /* Add styles for the top-left navigation container */
+    .top-left-nav {
+        position: absolute;
+        top: 0;
+        left: 3;
+        padding: 10px;
+    }
+
+    /* Add styles for the navigate icon */
+    .navigate-icon {
+        font-size: 15px; /* Adjust the font size for the icon */
+        margin-right: 10px; /* Add margin to separate icon from text */
+    }
+    
+    /* Styles for the navigation button */
+    .cta-button {
+        display: inline-block;
+        padding: 10px 15px;
+        background-color: #4caf50; /* Blue color */
+        color: #fff; /* White text color */
+        text-decoration: none;
+        border-radius: 50px; /* Rounded corners */
+        transition: background-color 0.3s ease;
+    }
+     
+      /* Hover effect for the navigation button */
+    .cta-button:hover {
+        background-color: #45a049; /* Darker blue on hover */
+    }
+
+
+    /* Rest of your existing styles */
+</style>
+
+<body>
+    <div class="login">
+        <h1>Energy Efficiency predictor</h1>
+        <form action="{{ url_for('home')}}" method="post">
+            
+            
+            <div class="mb-3">
+                <label class="form-label">Relative Compactness (ratio)</label>
+                <input class="form-control" type="number" name="Relative Compactness (ratio)"
+                    placeholder="Enter your Compactness ratio[0.0 to 1.0]" min='0' max='1.0' step="0.001" />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Overall Height (m)</label>
+                <input class="form-control" type="number" name="Overall Height (m)"
+                    placeholder="Enter your Hight value[0.0 to 10.0 meters]" min='0.0' max='10.0' step="0.001" />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Orientation (Degrees)</label>
+                <input class="form-control" type="number" name="Orientation (Degrees)"
+                    placeholder="Enter your Orientation's Degree[0.0 to 10.0 degrees]" min='0.0' max='10.0' step="0.001" />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Glazing Area(m²)</label>
+                <input class="form-control" type="number" name="Glazing Area(m²)"
+                    placeholder="Enter your Glazed Area[0.0 to 10.0 square meters]" min='0.0' max='10.0' step="0.001"/>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Glazing Area Distribution (Ratio)</label>
+                <input class="form-control" type="number" name="Glazing Area Distribution (Ratio)"
+                    placeholder="Enter your Ratio [0.0 to 10.0]" min='0.0' max='10.0' step="0.001"/>
+            </div>
+            
+            <div class="mb-3">
+                <label class="form-label">Glazing_Orientation</label>
+                <input class="form-control" type="number" name="Glazing_Orientation"
+                    placeholder="Enter your Glazing_Orientation[0.0 to 10.0]" min='0.0' max='10.0' step="0.001"/>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Aspect Ratio</label>
+                <input class="form-control" type="number" name="Aspect Ratio"
+                    placeholder="Enter your Aspect Ratio[0.0 to 500]" min='0.0' max='500' step="0.001"/>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Total Area</label>
+                <input class="form-control" type="number" name="Total Area"
+                    placeholder="Enter your Total Area[0.0 to 2000 square meters]" min='0.0' max='2000' step="0.001"/>
+            </div>
+            <div class="mb-3">
+                <input class="btn" type="submit" value="Predict Energy Efficiency " required />
+            </div>
+        </form>
+        <h2>
+            <!-- Display the first result for Heating Load -->
+            <h2>Heating Load Prediction: {{ result1 }}</h2>
+
+            <!-- Display the second result for Cooling Load -->
+            <h2>Cooling Load Prediction: {{ result2 }}</h2>
+        </h2>
+    </div>
+</body>
+</html>

@@ -1,0 +1,9 @@
+numpy
+pandas
+python-dotenv
+pymysql
+scikit-learn
+seaborn 
+matplotlib
+Flask
+# -e .
