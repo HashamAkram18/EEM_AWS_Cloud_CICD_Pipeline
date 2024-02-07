@@ -1,0 +1,4 @@
+[ 2024-02-07 11:37:59,462 ] 96 werkzeug - WARNING -  * Debugger is active!
+[ 2024-02-07 11:37:59,468 ] 96 werkzeug - INFO -  * Debugger PIN: 568-501-697
+[ 2024-02-07 11:38:04,978 ] 96 werkzeug - INFO - 127.0.0.1 - - [07/Feb/2024 11:38:04] "GET / HTTP/1.1" 200 -
+[ 2024-02-07 11:38:26,812 ] 96 werkzeug - INFO - 127.0.0.1 - - [07/Feb/2024 11:38:26] "GET /home HTTP/1.1" 200 -

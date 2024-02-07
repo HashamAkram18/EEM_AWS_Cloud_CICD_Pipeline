@@ -21,13 +21,14 @@ def home():
         return render_template('home.html')
     else:
         if all(request.form.values()):
+            print("Form values:", request.form)
             data = CustomData(
                 relative_compactness=float(request.form.get('Relative Compactness (ratio)')),
                 overall_height=float(request.form.get('Overall Height (m)')),
                 orientation_degrees=float(request.form.get('Orientation (Degrees)')),
                 glazing_area=float(request.form.get('Glazing Area(m²)')),
                 glazing_area_distribution_ratio=float(request.form.get('Glazing Area Distribution (Ratio)')),
-                glazing_orientation=float(request.form.get('Glazing_Orientation')),
+                glazing_orientation=float(request.form.get('Glazing Orientation')),
                 aspect_ratio=float(request.form.get('Aspect Ratio')),
                 total_area=float(request.form.get('Total Area'))
             )
@@ -46,7 +47,9 @@ def home():
             return render_template('home.html', result1=results[0, 0], result2=results[0, 1])
 
         else:
-            return render_template('error.html', message="Form data is incomplete.")
+            error_message = "Some form fields are missing or empty: {}".format(request.form)
+            print(error_message)
+            return render_template('error.html', message="Form data is incomplete. Please fill out all fields.")
 
         
 

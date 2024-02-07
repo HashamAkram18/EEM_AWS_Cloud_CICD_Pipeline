@@ -1,0 +1,27 @@
+[ 2024-02-07 13:03:21,009 ] 96 werkzeug - WARNING -  * Debugger is active!
+[ 2024-02-07 13:03:21,010 ] 96 werkzeug - INFO -  * Debugger PIN: 568-501-697
+[ 2024-02-07 13:03:21,750 ] 96 werkzeug - INFO - 127.0.0.1 - - [07/Feb/2024 13:03:21] "GET /home HTTP/1.1" 200 -
+[ 2024-02-07 13:04:01,322 ] 96 werkzeug - INFO - 127.0.0.1 - - [07/Feb/2024 13:04:01] "[35m[1mPOST /home HTTP/1.1[0m" 500 -
+[ 2024-02-07 13:04:01,893 ] 96 werkzeug - INFO - 127.0.0.1 - - [07/Feb/2024 13:04:01] "GET /home?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+[ 2024-02-07 13:04:01,894 ] 96 werkzeug - INFO - 127.0.0.1 - - [07/Feb/2024 13:04:01] "GET /home?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+[ 2024-02-07 13:04:01,940 ] 96 werkzeug - INFO - 127.0.0.1 - - [07/Feb/2024 13:04:01] "GET /home?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+[ 2024-02-07 13:04:02,282 ] 96 werkzeug - INFO - 127.0.0.1 - - [07/Feb/2024 13:04:02] "[36mGET /home?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+[ 2024-02-07 13:06:25,837 ] 96 werkzeug - INFO - 127.0.0.1 - - [07/Feb/2024 13:06:25] "GET /home HTTP/1.1" 200 -
+[ 2024-02-07 13:06:31,599 ] 96 werkzeug - INFO - 127.0.0.1 - - [07/Feb/2024 13:06:31] "GET / HTTP/1.1" 200 -
+[ 2024-02-07 13:06:33,980 ] 96 werkzeug - INFO - 127.0.0.1 - - [07/Feb/2024 13:06:33] "GET /home HTTP/1.1" 200 -
+[ 2024-02-07 13:07:21,838 ] 96 werkzeug - INFO - 127.0.0.1 - - [07/Feb/2024 13:07:21] "[35m[1mPOST /home HTTP/1.1[0m" 500 -
+[ 2024-02-07 13:07:22,217 ] 96 werkzeug - INFO - 127.0.0.1 - - [07/Feb/2024 13:07:22] "[36mGET /home?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+[ 2024-02-07 13:07:22,225 ] 96 werkzeug - INFO - 127.0.0.1 - - [07/Feb/2024 13:07:22] "[36mGET /home?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+[ 2024-02-07 13:07:22,465 ] 96 werkzeug - INFO - 127.0.0.1 - - [07/Feb/2024 13:07:22] "[36mGET /home?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+[ 2024-02-07 13:07:22,598 ] 96 werkzeug - INFO - 127.0.0.1 - - [07/Feb/2024 13:07:22] "[36mGET /home?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+[ 2024-02-07 13:20:02,308 ] 96 werkzeug - INFO - 127.0.0.1 - - [07/Feb/2024 13:20:02] "[35m[1mPOST /home HTTP/1.1[0m" 500 -
+[ 2024-02-07 13:20:02,572 ] 96 werkzeug - INFO - 127.0.0.1 - - [07/Feb/2024 13:20:02] "[36mGET /home?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+[ 2024-02-07 13:20:02,672 ] 96 werkzeug - INFO - 127.0.0.1 - - [07/Feb/2024 13:20:02] "[36mGET /home?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+[ 2024-02-07 13:20:02,711 ] 96 werkzeug - INFO - 127.0.0.1 - - [07/Feb/2024 13:20:02] "[36mGET /home?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+[ 2024-02-07 13:20:03,075 ] 96 werkzeug - INFO - 127.0.0.1 - - [07/Feb/2024 13:20:03] "[36mGET /home?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+[ 2024-02-07 13:20:27,523 ] 96 werkzeug - INFO - 127.0.0.1 - - [07/Feb/2024 13:20:27] "[35m[1mPOST /home HTTP/1.1[0m" 500 -
+[ 2024-02-07 13:20:27,874 ] 96 werkzeug - INFO - 127.0.0.1 - - [07/Feb/2024 13:20:27] "[36mGET /home?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+[ 2024-02-07 13:20:27,875 ] 96 werkzeug - INFO - 127.0.0.1 - - [07/Feb/2024 13:20:27] "[36mGET /home?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+[ 2024-02-07 13:20:28,134 ] 96 werkzeug - INFO - 127.0.0.1 - - [07/Feb/2024 13:20:28] "[36mGET /home?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+[ 2024-02-07 13:20:28,206 ] 96 werkzeug - INFO - 127.0.0.1 - - [07/Feb/2024 13:20:28] "[36mGET /home?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+[ 2024-02-07 13:24:42,697 ] 96 werkzeug - INFO -  * Detected change in 'G:\\iNeuron_internship\\EEM_AWS_CICD_Pipeline\\webapp.py', reloading

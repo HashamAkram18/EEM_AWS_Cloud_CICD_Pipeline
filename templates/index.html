@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Energy Efficiency predictor</title>
-    <!-- Include any additional styles or scripts here -->
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -19,7 +18,7 @@
             padding: 1em;
         }
         main {
-            max-width: 800px;
+            max-width: 90%; /* Adjusted to 90% of the viewport width */
             margin: 20px auto;
             padding: 20px;
             background-color: #fff;
@@ -39,7 +38,7 @@
             display: inline-block;
             background-color: #4caf50;
             color: #fff;
-            padding: 10px 20px;
+            padding: 20px 24px;
             text-decoration: none;
             border-radius: 50px;
             transition: background-color 0.3s ease;
@@ -48,14 +47,38 @@
             background-color: #45a049;
         }
         .navigate-icon {
-            font-size: 18px;
-            margin-right: 5px;
+            position: margin-bottom; /* Set position to absolute */
+            top: 50%; /* Align to the vertical center of the parent element */
+            left: 50%; /* Align to the horizontal center of the parent element */
+            transform: translate(-50%, -50%);
+            font-size: 15px;
+            margin-right: 1px;
         }
-    </style>
-    <style>
-        /* Add margin-bottom to paragraphs */
-        p {
-            margin-bottom: 20px; /* Adjust the value as needed */
+        .content-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+        }
+        .section {
+            flex: 1 1 45%; /* Adjust width for each section */
+            margin-bottom: 20px;
+        }
+        .section h2 {
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .section ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        .section ul li {
+            margin-bottom: 10px;
+        }
+        .section ul li strong {
+            font-weight: bold;
         }
     </style>
 </head>
@@ -66,81 +89,37 @@
     </header>
 
     <main>
-        <p>
-            This project uses machine learning to predict Structures Energy Efficiency based on various factors.
-            Enter the details on the prediction page, and the system will provide an estimate of the corresponding Energy Efficiency values.
-        </p>
-
-        <p>
-    Factors considered include:
-    <ul>
-        <li>
-            <strong>1-Relative Compactness (ratio):</strong>
-            <ul>
-                <li><strong>Description:</strong> Represents the ratio of the compactness of the building.</li>
-                <li><strong>Input Range:</strong> 0.0 to 1.0</li>
-            </ul>
-        </li>
-        <li>
-            <strong>2-Overall Height (m):</strong>
-            <ul>
-                <li><strong>Description:</strong> Indicates the overall height of the building.</li>
-                <li><strong>Input Range:</strong> 0.0 to 10.0 meters</li>
-            </ul>
-        </li>
-        <li>
-            <strong>3-Orientation (Degrees):</strong>
-            <ul>
-                <li><strong>Description:</strong> Denotes the orientation of the building in degrees.</li>
-                <li><strong>Input Range:</strong> 0.0 to 10.0 degrees</li>
-            </ul>
-        </li>
-        <li>
-            <strong>4-Glazing Area (m²):</strong>
-            <ul>
-                <li><strong>Description:</strong> Refers to the glazed area of the building.</li>
-                <li><strong>Input Range:</strong> 0.0 to 10.0 square meters</li>
-            </ul>
-        </li>
-        <li>
-            <strong>5-Glazing_Orientation:</strong>
-            <ul>
-                <li><strong>Description:</strong> Represents the orientation of glazing.</li>
-                <li><strong>Input Range:</strong> 0.0 to 10.0</li>
-            </ul>
-        </li>
-        <li>
-            <strong>6-Aspect Ratio:</strong>
-            <ul>
-                <li><strong>Description:</strong> Denotes the aspect ratio of the building.</li>
-                <li><strong>Input Range:</strong> 0.0 to 500</li>
-            </ul>
-        </li>
-        <li>
-            <strong>7-Total Area:</strong>
-            <ul>
-                <li><strong>Description:</strong> Represents the total area of the building.</li>
-                <li><strong>Input Range:</strong> 0.0 to 2000</li>
-            </ul>
-        </li>
-    </ul>
-</p>
-
-
-
-
-        <p>
-            <a href="{{url_for('home')}}" class="cta-button">
-                <span class="navigate-icon">&#10148;</span> Navigate to Prediction Page
-            </a>
-        </p>
+        <div class="content-container">
+            <div class="section">
+                <p>
+                    This project uses machine learning to predict Structures Energy Efficiency based on various factors.
+                    Enter the details on the prediction page, and the system will provide an estimate of the corresponding Energy Efficiency values.
+                </p>         
+            <div class="section">
+                <h2>Factors considered include:</h2>
+                <ul>
+                    <li><strong>1-Relative Compactness (ratio):</strong> Represents the ratio of the compactness of the building.</li>
+                    <li><strong>2-Overall Height (m):</strong> Indicates the overall height of the building.</li>
+                    <li><strong>3-Orientation (Degrees):</strong> Denotes the orientation of the building in degrees.</li>
+                    <li><strong>4-Glazing Area (m²):</strong> Refers to the glazed area of the building.</li>
+                    <li><strong>5-Glazing_Orientation:</strong> Represents the orientation of glazing.</li>
+                    <li><strong>6-Aspect Ratio:</strong> Denotes the aspect ratio of the building.</li>
+                    <li><strong>7-Total Area:</strong> Represents the total area of the building.</li>
+                </ul>
+            </div>
+            
+                <p>
+                    <a href="{{url_for('home')}}" class="cta-button">
+                        <span class="navigate-icon">&#10148;</span> Navigate to Prediction Page
+                    </a>
+                </p>
+            </div>
+        </div>
     </main>
 
     <footer>
-        <p>&copy; 2024 Student Math Score Predictor</p>
+        <p>&copy; Structures Energy Efficiency predictor</p>
     </footer>
-
-    <!-- Include any additional scripts here -->
 
 </body>
 </html>
