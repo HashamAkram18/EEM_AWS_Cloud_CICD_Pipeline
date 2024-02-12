@@ -22,11 +22,15 @@ class DataIngestion:
 
     def initiate_data_ingestion(self):
         try:
-            # # choice(1):code to read form the mysql data
+            ## choice(1): code to read form the mysql data
             # df=read_MySql_data()            
             # logging.info("Reading completed from MySQL database")
+
+            ## choice(2): code to read form the Cassandra databases data
+            # df = fetch_cassandra_data()
+            # logging.info("Reading completed from Cassandra database")
             
-            ## choice(2): code to read csv file data from local matchine files
+            ## choice(3): code to read csv file data from local matchine files
             df = pd.read_csv(os.path.join('Notebook', 'Data', 'ENB2012_data.csv'))
             
              # Rename the columns

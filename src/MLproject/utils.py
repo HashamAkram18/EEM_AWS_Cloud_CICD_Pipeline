@@ -1,5 +1,9 @@
 import os 
 import sys
+import pandas as pd
+from cassandra.cluster import Cluster
+from cassandra.auth import PlainTextAuthProvider
+import json
 from src.MLproject.exception import CustomException
 
 from src.MLproject.logger import logging
@@ -21,7 +25,6 @@ user = os.getenv("user")
 password = os.getenv("password")
 db = os.getenv("db")
 
-
 def read_MySql_data():
     logging.info("Reading SQL database started")
     try:
@@ -40,7 +43,32 @@ def read_MySql_data():
         raise CustomException(ex)
 
 
-# Set up logging
+def fetch_cassandra_data():
+   
+   logging.info("Reading Cassendra database started")
+   try:
+        """
+        Connects to Cassandra, fetches data from the specified table,
+        and returns it as a pandas DataFrame, using hardcoded credentials and query.
+        """
+
+        with open("Your-db-token.json") as f:
+            secrets = json.load(f)
+
+        cloud_config = {'secure_connect_bundle': 'secure-connect-Your-db.zip'}
+
+        auth_provider = PlainTextAuthProvider(secrets["clientId"], secrets["secret"])
+        cluster = Cluster(cloud=cloud_config, auth_provider=auth_provider)
+        session = cluster.connect()
+
+        query = "SELECT * FROM your_keyspace.your_datatable;"
+        df = pd.DataFrame(list(session.execute(query)))
+
+        return df
+   except Exception as ex:
+        raise CustomException(ex)
+   
+   # Set up logging
 logging.basicConfig(level=logging.INFO)
 
 def evaluate_models(X_train, y_train, X_test, y_test, models, params):
