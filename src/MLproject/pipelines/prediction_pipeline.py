@@ -2,6 +2,7 @@ import os
 import sys
 import pandas as pd
 from src.MLproject.exception import CustomException
+from src.MLproject.logger import logging
 from src.MLproject.utils import load_object
 
 
@@ -14,17 +15,23 @@ class PredictPipeline:
             model_path=os.path.join('Artifacts','model.pkl')
             preprocessing_path=os.path.join('Artifacts','preprocesser.pkl')
             print("Before Loading")
-
+            
+            logging.info("Loading model and preprocessing objects...")
             model=load_object(file_path=model_path)
             preprocessor=load_object(file_path=preprocessing_path)
             print("After loading")
 
+            logging.info("Transforming input features...")
             data_scaled=preprocessor.transform(features)
+
+            logging.info("Making predictions...")
             preds=model.predict(data_scaled)
             
         
             return preds
         except Exception as e:
+            error_message = f"Error occurred during prediction: {str(e)}"
+            logging.error(error_message)
             raise CustomException(sys,e)
 
 

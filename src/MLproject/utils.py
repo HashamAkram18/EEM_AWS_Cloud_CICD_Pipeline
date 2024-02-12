@@ -112,4 +112,6 @@ def load_object(file_path):
             return pickle.load(file_obj)
     
     except Exception as e:
+        error_message = f"Error occurred while loading object from file: {file_path}. Error: {str(e)}"
+        logging.error(error_message)
         raise CustomException(sys,e)
