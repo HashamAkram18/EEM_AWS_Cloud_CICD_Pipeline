@@ -42,31 +42,6 @@ def read_MySql_data():
     except Exception as ex:
         raise CustomException(ex)
 
-
-# def fetch_cassandra_data():
-   
-#    logging.info("Reading Cassendra database started")
-#    try:
-#         """
-#         Connects to Cassandra, fetches data from the specified table,
-#         and returns it as a pandas DataFrame, using hardcoded credentials and query.
-#         """
-
-#         with open("Your-db-token.json") as f:
-#             secrets = json.load(f)
-
-#         cloud_config = {'secure_connect_bundle': 'secure-connect-Your-db.zip'}
-
-#         auth_provider = PlainTextAuthProvider(secrets["clientId"], secrets["secret"])
-#         cluster = Cluster(cloud=cloud_config, auth_provider=auth_provider)
-#         session = cluster.connect()
-
-#         query = "SELECT * FROM your_keyspace.your_datatable;"
-#         df = pd.DataFrame(list(session.execute(query)))
-
-#         return df
-#    except Exception as ex:
-#         raise CustomException(ex)
    
    # Set up logging
 logging.basicConfig(level=logging.INFO)
@@ -115,3 +90,29 @@ def load_object(file_path):
         error_message = f"Error occurred while loading object from file: {file_path}. Error: {str(e)}"
         logging.error(error_message)
         raise CustomException(sys,e)
+    
+
+    # def fetch_cassandra_data():
+   
+#    logging.info("Reading Cassendra database started")
+#    try:
+#         """
+#         Connects to Cassandra, fetches data from the specified table,
+#         and returns it as a pandas DataFrame, using hardcoded credentials and query.
+#         """
+
+#         with open("Your-db-token.json") as f:
+#             secrets = json.load(f)
+
+#         cloud_config = {'secure_connect_bundle': 'secure-connect-Your-db.zip'}
+
+#         auth_provider = PlainTextAuthProvider(secrets["clientId"], secrets["secret"])
+#         cluster = Cluster(cloud=cloud_config, auth_provider=auth_provider)
+#         session = cluster.connect()
+
+#         query = "SELECT * FROM your_keyspace.your_datatable;"
+#         df = pd.DataFrame(list(session.execute(query)))
+
+#         return df
+#    except Exception as ex:
+#         raise CustomException(ex)

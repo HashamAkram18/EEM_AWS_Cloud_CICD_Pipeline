@@ -1,0 +1,9 @@
+[ 2024-02-13 22:29:07,800 ] 96 werkzeug - WARNING -  * Debugger is active!
+[ 2024-02-13 22:29:07,800 ] 96 werkzeug - INFO -  * Debugger PIN: 568-501-697
+[ 2024-02-13 22:30:00,125 ] 96 werkzeug - INFO - 127.0.0.1 - - [13/Feb/2024 22:30:00] "GET / HTTP/1.1" 200 -
+[ 2024-02-13 22:30:00,346 ] 96 werkzeug - INFO - 127.0.0.1 - - [13/Feb/2024 22:30:00] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[ 2024-02-13 22:30:01,626 ] 96 werkzeug - INFO - 127.0.0.1 - - [13/Feb/2024 22:30:01] "GET /home HTTP/1.1" 200 -
+[ 2024-02-13 22:30:25,749 ] 19 root - INFO - Loading model and preprocessing objects...
+[ 2024-02-13 22:30:25,859 ] 24 root - INFO - Transforming input features...
+[ 2024-02-13 22:30:25,865 ] 27 root - INFO - Making predictions...
+[ 2024-02-13 22:30:25,871 ] 96 werkzeug - INFO - 127.0.0.1 - - [13/Feb/2024 22:30:25] "POST /home HTTP/1.1" 200 -
